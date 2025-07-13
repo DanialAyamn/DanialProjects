@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>BraudeFit</title>
+  </head>
+  <link rel="stylesheet" href="hm1css.css">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1048.0.min.js"></script>
+  <script src="hm1js.js" defer></script>
+  <script src="dataAccess.js" defer></script>
+</head>
+<body>
+    <h1 id="braudefit">BraudeFit</h1>
+    <h3>רישום לחדר הכושר</h3>
+    <form id="gymForm" action="gym-tutorials.html" method="GET">
+        <table>
+            <tr>
+                <td>First name:</td>
+                <td><input type="text" id="fname" name="fname" value="enter your First name"></td>
+            </tr>
+            <tr>
+                <td>Last name:</td>
+                <td><input type="text" id="lname" name="lname" value="enter your Last name"></td>
+            </tr>
+            <tr>
+                <td>Special Request:</td>
+                <td><textarea id="txt1" name="txt1" rows="8" cols="35"></textarea></td>
+            </tr>
+            <tr>
+                <td>Choose gender:</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male"> Male
+                    <br>
+                    <input type="radio" id="female" name="gender" value="Female"> Female
+                </td>
+            </tr>
+          <tr>
+    <td>Enter your phone number:</td>
+    <td>
+        <small>Select your country and enter the number</small>
+        <br>
+        <select id="countryCode" name="countryCode" required>
+            <option value="+972">Israel (+972)</option>
+            <option value="+1">USA (+1)</option>
+            <option value="+44">UK (+44)</option>
+            <option value="+91">India (+91)</option>
+            <option value="+61">Australia (+61)</option>
+        </select>
+        <input type="tel" id="phone" placeholder="Enter your number" pattern="\d{7,10}" required>
+        <br><br>
+    </td>
+</tr>
+
+			<tr>
+    <td>Membership Start Date:</td>
+    <td><input type="date" id="startDate" name="startDate" onchange="calculateEndDate()"></td>
+</tr>
+<tr>
+    <td>Membership Duration:</td>
+    <td>
+        <select id="membershipDuration" name="membershipDuration" onchange="calculateEndDate()">
+            <option value="1">1 Month</option>
+            <option value="3">3 Months</option>
+            <option value="6">6 Months</option>
+            <option value="12">1 Year</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>Membership End Date:</td>
+    <td><input type="date" id="endDate" name="endDate" readonly></td>
+</tr>
+
+            <tr class="centered">
+			<td colspan="2">
+			<button type="submit">Submit</button>
+			<button type="reset">Clear</button>
+			<button class="return-button">HomePage</button>
+			</td>
+</tr>
+			
+        </table>
+    </form>
+	    <footer>
+        <p>&copy; 2024 BraudeFit. All rights reserved.</p>
+    </footer>
+</body>
+</html>

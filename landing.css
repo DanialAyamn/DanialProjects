@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Gallery/back1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    background: rgba(46, 46, 46, 0.9);
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5), 0px 1px 5px rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    font-style: italic;
+    color: #f0f0f0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Buttons */
+button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button {
+    background-color: #45a049;
+    color: white;
+}
+
+.signup-button:hover {
+    background-color: #3d8b41;
+    transform: scale(1.05);
+}
+
+.times-button {
+    background-color: #010889;
+    color: white;
+}
+
+.times-button:hover {
+    background-color: #3333cc;
+    transform: scale(1.05);
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    color: #333;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #D3D3D3;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Gallery Items */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.desc {
+    margin-top: 10px;
+    padding: 1px;
+    font-size: 1rem;
+    color: white;
+    
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
